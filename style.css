@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background: #333;
+    padding: 10px 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    position: relative;
+    margin: 0 20px;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
+    position: relative;
+    font-size: 18px;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Adjust this for vertical position */
+    height: 2px;
+    width: 0;
+    background: #fff;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+    left: 0;
+}
