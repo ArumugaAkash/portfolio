@@ -35,62 +35,74 @@ function type() {
 
 type();
 
+const menu = document.querySelector('.menu');
+const menuList=document.querySelector('nav ul')
+menu.addEventListener('click',()=>{
+        menuList.classList.toggle('showmenu')
+})
 
-function toggleMenu() {
-    const menu = document.getElementById('menu');
-    if (menu.style.display === 'block') {
-        menu.style.display = 'none';
-    } else {
-        menu.style.display = 'block';
-    }
-}
-
-
-
-
+// const menu = document.querySelector('.menu')
+// const menuList=document.querySelector('#toggle')
+// menu.addEventListener('click',()=>{
+//     menuList.classList.toggle('showmenu')
+// })
 
 
+// function toggleMenu() {
+//     const menu = document.getElementById('menu');
+//     if (menu.style.display === 'block') {
+//         menu.style.display = 'none';
+//     } else {
+//         menu.style.display = 'block';
+//     }
+// }
 
 
-    function underlinetext(event, id) {
-        document.querySelectorAll('.display-content p').forEach(p => {
-            p.parentElement.classList.remove('underline');
-        });
-        document.getElementById(id).parentElement.classList.add('underline');
-    }
+
+
+
+
+
+
+//     function underlinetext(event, id) {
+//         document.querySelectorAll('.display-content p').forEach(p => {
+//             p.parentElement.classList.remove('underline');
+//         });
+//         document.getElementById(id).parentElement.classList.add('underline');
+//     }
     
-    document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("homelink").classList.add("underline");
-        location.hash = '#home';
-    });
+//     document.addEventListener("DOMContentLoaded", function() {
+//         document.getElementById("homelink").classList.add("underline");
+//         location.hash = '#home';
+//     });
 
 
 
     
-    document.addEventListener("scroll", function() {
-        const sections = document.querySelectorAll("div[id]");
-        const navLinks = document.querySelectorAll(".display-content a");
+//     document.addEventListener("scroll", function() {
+//         const sections = document.querySelectorAll("div[id]");
+//         const navLinks = document.querySelectorAll(".display-content a");
         
-        // You can adjust this value to control when the underline appears
-        const triggerPoint = 0.5; // 0.5 means 50% of the screen's height
+//         // You can adjust this value to control when the underline appears
+//         const triggerPoint = 0.5; // 0.5 means 50% of the screen's height
     
-        sections.forEach(section => {
-            const rect = section.getBoundingClientRect();
-            const sectionTop = rect.top;
-            const sectionHeight = rect.height;
-            const viewportHeight = window.innerHeight;
-            const triggerPosition = viewportHeight * triggerPoint;
+//         sections.forEach(section => {
+//             const rect = section.getBoundingClientRect();
+//             const sectionTop = rect.top;
+//             const sectionHeight = rect.height;
+//             const viewportHeight = window.innerHeight;
+//             const triggerPosition = viewportHeight * triggerPoint;
     
-            if (sectionTop <= triggerPosition && sectionTop + sectionHeight > triggerPosition) {
-                const sectionId = section.getAttribute("id");
-                navLinks.forEach(link => {
-                    const linkText = link.getElementsByTagName("p")[0];
-                    if (link.getAttribute("href").substring(1) === sectionId) {
-                        linkText.parentElement.classList.add("underline");
-                    } else {
-                        linkText.parentElement.classList.remove("underline");
-                    }
-                });
-            }
-        });
-    });
+//             if (sectionTop <= triggerPosition && sectionTop + sectionHeight > triggerPosition) {
+//                 const sectionId = section.getAttribute("id");
+//                 navLinks.forEach(link => {
+//                     const linkText = link.getElementsByTagName("p")[0];
+//                     if (link.getAttribute("href").substring(1) === sectionId) {
+//                         linkText.parentElement.classList.add("underline");
+//                     } else {
+//                         linkText.parentElement.classList.remove("underline");
+//                     }
+//                 });
+//             }
+//         });
+//     });

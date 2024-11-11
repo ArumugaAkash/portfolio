@@ -1,17 +1,119 @@
-#main{
+/* toggler */
+
+#home{
     height: 100vh;
     background-image: url(./images/1170x600.jpg);
     background-size: cover; 
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    border-bottom: 15px solid rgba(0, 0, 0, 0.832);
 }
-/* @media screen and (min-width: 600px){
-    #main{
-        /* position:relative;
-        top: 500px; */
-    /* } */
-/* } */ 
+body{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: black;
+    padding: 5px;
+    font-size: 28px;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 1;
+}
+nav li{
+   
+    display: inline-block;
+    margin: 0 15px;
+   
+}
+
+nav ul{
+    margin-top: 10px;
+}
+nav a{
+   
+    text-decoration: none !important;
+    color:white !important;
+}
+.logo{
+    font-size:36px;
+    font-weight: bolder;
+}
+
+.menu-line{
+    height: 3px;
+    width: 20px;
+    background-color: white;
+    margin-bottom: 3px;
+
+}
+.menu{
+    cursor: pointer;
+    display: none;
+}
+
+@media all and (max-width:690px){
+    nav{
+        flex-direction: column;
+
+    }
+    nav li{
+        display:block;
+        padding:10px 0;
+    }
+    ul{
+        text-align: center;
+        padding: 0;
+        display: none;
+    }
+    .logo{
+        align-self: flex-start;
+        margin: 10px 0px 0px 30px;
+    }
+
+    .menu{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+
+    .showmenu{
+        display: block;
+    }
+} 
+
+
+ /* body */
+
+@media all and (max-width:960px){
+    .design{
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width:550px){
+    .design{
+       margin-left: 10px;
+       margin-right: 10px;
+    }
+}
+
+#text{
+    color: white;
+    display: flex;
+    justify-content: center;
+    position:relative;
+    top:45%;  
+    
+}
+.colo{
+    color: rgb(227, 222, 213);
+}
+
+#cent{
+    text-align: center;
+}
 
 @media screen and (max-width: 600px){
     #bor,.design{
@@ -20,6 +122,16 @@
     #img img{
         width: 100%;
         height: 90%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .progress{
+        width: 400px;
+    }
+    .image{
+        position: relative;
+        left: 20%;
     }
 }
 #colorchange ul li{
@@ -33,6 +145,10 @@
 #name h1 span{
     font-size: 50px;
    
+}
+
+.skill{
+    padding-top: 120px;
 }
 
 /* #port{
@@ -84,7 +200,7 @@ hr{
       
 }
 
-#web{
+#web,#blog{
     
     background-color: rgb(244, 242, 240);
     padding-top: 60px;
@@ -96,33 +212,37 @@ hr{
 #align{
 padding-top: 50px;
 }
- a,#h1{
+ /* a,#h1{
    text-decoration: none; 
    color:  white !important;
    
-}
+} */
+/* #h1{
+    font-size: 36px;
+    font-weight: bolder !important;
+} */
 
-.anim{
+/* .anim{
     text-decoration: none !important;
-}
+} */
 #services,#about{
     background-color:rgb(244, 242, 240);
 }
 
-li {
+/* li {
     padding: 10px 20px;
     color: white;
-}
+} */
 /* #blo{
     padding: 100px;
 } */
 
-nav{
+/* nav{
     background-color: black ;
     position: fixed;
     width: 100%;
     z-index: 1;
-}
+} */
 
 .html{
     background-color: rgb(10, 129, 240) ;
@@ -144,13 +264,27 @@ nav{
     border-radius: 20px;
     width: 80%;
 }
+.sql{
+    background-color: yellowgreen;
+    border-radius: 20px;
+    width: 70%;
+}
+.dj{
+    background-color: rgb(205, 122, 50);
+    border-radius: 20px;
+    width: 50%;
+}
 
+.percent{
+    display: flex;
+    justify-content: space-between;
+}
 
- .anim{
+a{
     position:relative;
     margin-bottom: 10px;
 }
-.anim::after{
+a::after{
     content: '';
     position :absolute;
     bottom:0;
@@ -160,7 +294,7 @@ nav{
     height:2px;
     background-color:white;
 }
-.anim:hover::after{
+a:hover::after{
     animation: line 1s forwards;  
 }
 
@@ -169,7 +303,7 @@ nav{
        width:0px;
     }
     to{
-        width:30px;
+        width:50px;
     }
 }
 
@@ -182,13 +316,6 @@ nav{
     background-color: wheat;
    
 } */
-
-#name{
-    display: flex;
-    justify-content: center;
-    position:relative;
-    top:34%;  
-}
     
 .file{
     width: 400px;
@@ -199,9 +326,6 @@ p,.file{
     padding-left: 20px;
 }
 
-#anim{
-    animation: none !important;
-}
 
 
 #color{

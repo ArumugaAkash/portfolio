@@ -8,38 +8,34 @@
   <title>AKASH</title>
   <link rel="stylesheet" href="./portfolio.css">
   <link rel="stylesheet" href="./boostrap/bootstrap.min.css">
-
+  <link rel="stylesheet" href="./toggler.css">
 </head>
 
 <body>
 
-  <div id="main">
-    <nav>
-      <div class="container d-flex justify-content-between">
+  <nav>
+    <div class="logo">
+      <a href="">Akash</a>
+    </div>
 
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#web">Services</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="menu">
+      <div class="menu-line"></div>
+      <div class="menu-line"></div>
+      <div class="menu-line"></div>
+    </div>
 
-        <div id="h1">
-          <h1 class="color:white pt-3">Akash</h1>
-        </div>
-        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=""></button> --> -->
-        <div>
-
-          <ul type="none" class="d-flex pt-3">
-            <li><a class="anim" href="#main"><span class="h5">Home</span></a>
-              <div id="hover"></div>
-            </li>
-
-            <li><a class="anim" href="#about"><span class="h5">About</span></a></li>
-            <li><a class="anim" href="#web"><span class="h5">Services</span></a></li>
-            <li><a class="anim" href="#"><span class="h5">Blog</span></a></li>
-            <li><a class="anim" href="#contact"><span class="h5">Contact</span></a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div id="name">
-      <h1>I am Akash<br>
-        <span id="role"></span>
+  </nav>
+  <div id="home">
+    <div id="text">
+      <h1 id="cent">I Am Arumuga Akash<br>
+        <span class="colo" id="role"></span>
       </h1>
     </div>
   </div>
@@ -47,35 +43,17 @@
   <div class=" container-fluid pt-5 wx-5" id="about">
     <div id="align" class=" container bg-white py-5">
       <div id="port" class="row">
-        <div class="col p-3">
-          <img src="./images/68080723akash_copy_402x496_2.jpg" class="center-block" height="250px" width="250px" alt="ps photo">
+        <div class="col p-3 image">
+          <img src="./images/68080723akash_copy_402x496_2.jpg" class="center-block" height="250px" width="250px"
+            alt="ps photo">
           <p><b>Name: </b>Arumuga Akash</p>
           <p><b>Profile: </b>full stack developer</p>
           <p><b>Email: </b>arumugaakash@gmail.com</p>
           <p><b>Phone: </b>8072846679</p>
           <br>
 
-          <h6 class="text-center ">SKILLS</h6>
-          <hr><br>
-          <p class="display-5">HTML5 & CSS3</p>
-          <div class="progress ">
-            <div class="progress-ba html"></div>
-          </div><br>
 
-          <p class="display-5">BOOSTRAP</p>
-          <div class="progress">
-            <div class="progress-ba boos"></div>
-          </div><br>
-          <p class="display-5">JAVASCRIPT</p>
-          <div class="progress">
-            <div class="progress-ba java"></div>
-          </div><br>
-          <p class="display-5">PYTHON</p>
-          <div class="progress ">
-            <div class="progress-ba py"></div>
-          </div><br>
         </div>
-
 
         <div class="col">
           <h1 class="text-center">About Me</h1>
@@ -87,9 +65,69 @@
             sequi molestias eligendi explicabo qui illo fugit maiores aliquam architecto esse cum voluptate asperiores
             accusamus.</p>
           <h2>Check My Resume</h2>
-          <a href="./images/Ak resume.pdf" download="Akash Resume"><button>download resume</button></a>
+          <a href="./images/Ak Resume (2).pdf" download="Akash Resume"><button>download resume</button></a>
         </div>
       </div>
+
+      <div class="row">
+
+        <div class="col pt-5 respon">
+          <h6 class="text-center ">SKILLS</h6>
+          <hr><br>
+
+
+          <div class="percent">
+          <p class="display-5">HTML5 & CSS3</p>
+          <h6>90%</h6>
+          </div>
+          <div class="progress ">
+            <div class="progress-ba html"></div>
+          </div><br>
+
+          <div class="percent">
+          <p class="display-5">BOOSTRAP</p>
+          <h6>60%</h6>
+        </div>
+          <div class="progress">
+            <div class="progress-ba boos"></div>
+          </div><br>
+
+          <div class="percent">
+          <p class="display-5">JAVASCRIPT</p>
+          <h6>70%</h6>
+        </div>
+          <div class="progress">
+            <div class="progress-ba java"></div>
+          </div><br>
+        </div>
+
+        <div class="col skill">
+          <div class="percent">
+          <p class="display-5">PYTHON</p>
+          <h6>80%</h6>
+          </div>
+          <div class="progress ">
+            <div class="progress-ba py"></div>
+          </div><br>
+
+          <div class="percent">
+          <p class="display-5">MYSQL</p>
+          <h6>70%</h6>
+        </div>
+          <div class="progress ">
+            <div class="progress-ba sql"></div>
+          </div><br>
+
+          <div class="percent">
+          <p class="display-5">DJANGO</p>
+          <h6>50%</h6>
+        </div>
+          <div class="progress ">
+            <div class="progress-ba dj"></div>
+          </div><br>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -154,7 +192,7 @@
     </div>
   </div>
 
-  <div id="web" class="container-fluid">
+  <div id="blog" class="container-fluid">
     <div id="white" class="container pb-4">
       <div>
         <h1 class="text-center py-4 ">BLOG</h1>
@@ -248,9 +286,9 @@
 
   </div>
   <link rel="stylesheet" href="./boostrap/bootstrap.min.js">
-  <script src="./portfolio.js">
+  <script src="./portfolio.js"></script>
 
-  </script>
+
 </body>
 
 </html>
